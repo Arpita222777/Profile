@@ -1,0 +1,416 @@
+* {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(19, 19, 19, 255);
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0px;
+  height: 80px;
+  display: flex;
+  z-index: 1000;
+  background-color: rgba(19, 19, 19, 255);
+  width: 100%;
+}
+.LogoImg {
+  margin: 10px auto auto 55px;
+  display: block;
+  width: 110px;
+  height: 40px;
+  position: fixed;
+}
+.menuI{
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 25px;
+  height: 20px;
+  width: 20px;
+}
+.user-info {
+  list-style-type: none;
+  position: absolute;
+  color: aliceblue;
+  text-align: left;
+  left: 980px;
+  gap: 0px;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  
+}
+.username {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+.designation {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.Uimg {
+  position: fixed;
+  top:20px;
+  left: 920px;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Unotify {
+  position: fixed;
+  top:25px;
+  left: 850px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.search-bar {
+  position: absolute;
+  left: 220px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  color: white;
+  background-color: transparent;
+  width: 550px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.search-bar input::placeholder {
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .fa-search {
+  color: white;
+  margin-left: 10px;
+}
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.SideNav {
+  position: fixed;
+  padding: 0;
+  top: 80px;
+  width: 200px;
+  height: 100%;
+  background-color: rgba(15, 137, 155, 255);
+  overflow-x: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+}
+
+.Menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 0;
+  gap: 0px;
+  margin-left: -10px;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 15px;
+  margin-left: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  width: 190px;
+}
+
+.menuRow:hover {
+  background-color: rgba(19, 19, 19, 255);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.subMenu {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.logout {
+  position: fixed;
+  margin-top: 80px;
+  height: 15px;
+  width: 150px;
+  padding-left: 29px;
+}
+.panel1{
+  position:absolute;
+  top:80px;
+  left: 100px;
+  display: block;
+  width: 880px;
+  height: 600px;
+  background-color: rgba(19, 19, 19, 255);
+  overflow-x: hidden;
+}
+
+.balance{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.savings{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 305px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.Income{
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 20px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.Expense{
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 305px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.panel1 h1{
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
+  color: aliceblue;
+}
+.panel1 h2{
+  font-size: 18px;
+  color: aliceblue;
+  margin-left: 10px;
+  padding-top: 60px;
+}
+.FStatistics{
+  position: absolute;
+  margin-top: 330px;
+  margin-left: 20px;
+  width: 550px;
+  height: 200px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.AllTransactions{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 590px;
+  width: 270px;
+  height: 525px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+#panel1_lineChart_balance{
+  margin-top: -140px;
+  margin-left: 70px;
+}
+#panel1_lineChart_savings{
+  margin-top: -145px;
+  margin-left: 70px;
+  padding-left: 10px;
+  /* border: 2px solid red; */
+}
+#panel1_barChart_income{
+  margin-top: -140px;
+  margin-left: 70px;
+}
+#panel1_pieChart_expense{
+  margin-left: 70px;
+  margin-top: -145px;
+}
+#statisctics{
+  margin-top: -50px;
+  margin-left: 20px;
+}
+.panel2{
+  position:absolute;
+  display: none;
+  top:80px;
+  left: 200px;
+  width: 880px;
+  height: 650px;
+  background-color: rgba(19, 19, 19, 255);
+  overflow-x: hidden;
+
+}
+.panel2 h1{
+  margin-left: 30px;
+  font-size: 20px;
+  color: aliceblue;
+}
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 45px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 190px;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: rgba(27,26,31,255);
+}
+.carousel-wrapper h1{
+  margin-left: -670px;
+  height: 15px;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  width: 100%; /* Add this */
+  max-width: 100%; /* Optional, but safe */
+  padding-left: 50px;
+}
+
+  /* Hide scrollbar (Chrome, Safari, Opera) */
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar (Firefox) */
+  
+  .card {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 120px;
+    margin-left: 20px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    
+  }
+  
+  .add-card {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 10px;
+    z-index: 1;
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  .scroll-left {
+    margin-left: 5px;
+    margin-right: 5px;
+    left: 0;
+  }
+  .scroll-right {
+    margin-right: 5px;
+    right: 0;
+  }
+
+  .tansactions {
+    width: 800px;
+    height: 100%;
+    max-height: 300px;
+    margin: 30px auto;
+    background-color: rgba(27,26,31,255);
+    padding: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .transactions h1 {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .Transaction_table {
+    margin-left: 20px;
+    width: 90%;
+    border-collapse: collapse;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #888;
+  }
+  
+  .Transaction_table td {
+    border: 1px solid #888; /* Full border for each column + row */
+  }
+  
+  .table_labels td {
+    background-color: #5f5f94;
+    font-weight: bold;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  
+  .Data td {
+    padding: 10px;
+    background-color: #bcbcd4;
+    transition: background-color 0.2s;
+    color: black;
+  }
+  
+  .Data td:hover {
+    background-color: #3a3a52;
+    color: white;
+  }
+  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../../Asset/CSS/User Authentication/LogIn.css">
+    <link rel="stylesheet" href="https://cdnAsset/JS/.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="../../Asset/JS/ Authentication/LogIn.Asset/JS/" defer></script>
+</head>
+
+<body>
+    <h2 id="login_form_heading">Login to Your Account</h2>
+    <section aria-labelledby="login_form_heading" class="login_form">
+
+        <form id="main_form" method="post" action="../../Controller/LoginCheck.php">
+            <div class="form-group">
+                <!-- <label for="username">Username</label> -->
+                <input type="text" id="username" name="username" required class="inputbox" placeholder="Username" />
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" name="password" required class="inputbox" placeholder="Password" />
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="actions">
+                <!-- <button type="submit" class="button" id="login_btn" name="submit">Login</button> -->
+                <button type="submit" name="submit" class="button">Login</button>
+                <a href="EmailVerification.html" id="forget_pass">Forgot Password?</a>
+            </div>
+
+
+            <div class="signup">
+                <p>Don't have an account?</p>
+                <a href="SignUp.html" class="signup-button">Sign Up</a>
+            </div>
+        </form>
+        <!-- <footer>
+            <h4>Login With </h4>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+        </footer> -->
+    </section>
+
+</body>
+
+</html>
