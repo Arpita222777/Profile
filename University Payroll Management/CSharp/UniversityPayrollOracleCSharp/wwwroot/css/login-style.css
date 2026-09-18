@@ -1,0 +1,166 @@
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#eaf2ff;
+  color:#07142e;
+}
+.login-page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+}
+.login-card{
+  width:560px;
+  background:#fff;
+  border-radius:18px;
+  padding:38px 40px 28px;
+  box-shadow:0 18px 45px rgba(21,47,91,0.12);
+}
+.lock-circle{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  margin:0 auto 24px;
+  background:#2361f5;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  font-weight:bold;
+}
+.login-card h1{
+  margin:0;
+  text-align:center;
+  font-size:30px;
+  line-height:1.1;
+  color:#07142e;
+}
+.subtitle{
+  margin:14px 0 34px;
+  text-align:center;
+  color:#31476d;
+  font-size:20px;
+}
+.login-card label{
+  display:block;
+  font-size:16px;
+  font-weight:bold;
+  margin:0 0 10px;
+  color:#102951;
+}
+.input-icon{
+  position:relative;
+  margin-bottom:32px;
+}
+.input-icon span{
+  position:absolute;
+  left:16px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#93a6c6;
+  font-size:24px;
+}
+.input-icon input{
+  width:100%;
+  height:62px;
+  border:1px solid #c5d2e5;
+  border-radius:12px;
+  padding:0 18px 0 50px;
+  font-size:20px;
+  outline:none;
+}
+.login-card select{
+  width:100%;
+  height:62px;
+  border:1px solid #c5d2e5;
+  border-radius:12px;
+  padding:0 18px;
+  font-size:20px;
+  background:#fff;
+  margin-bottom:30px;
+  outline:none;
+}
+.login-card input:focus,.login-card select:focus{
+  border-color:#2361f5;
+  box-shadow:0 0 0 3px rgba(35,97,245,0.11);
+}
+.login-card button{
+  width:100%;
+  height:60px;
+  border:0;
+  border-radius:12px;
+  background:#2361f5;
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.login-card button:hover{background:#1952da;}
+.login-msg{
+  margin-top:16px;
+  padding:10px 12px;
+  border-radius:10px;
+  background:#fff1f2;
+  color:#b42318;
+  font-weight:bold;
+  text-align:center;
+}
+.demo-login{
+  margin-top:14px;
+  color:#6b7a99;
+  font-size:13px;
+  text-align:center;
+}
+@media(max-width:640px){
+  .login-card{width:100%; padding:28px 22px;}
+}
+.demo-login a{
+  color:#2361f5;
+  font-weight:bold;
+  text-decoration:none;
+}
+.demo-login a:hover{text-decoration:underline;}
+.credential-box{
+  margin-top:18px;
+  padding:14px 16px;
+  border:1px solid #d8e3f4;
+  border-radius:12px;
+  background:#f8fbff;
+  color:#304362;
+  font-size:13px;
+}
+.credential-title{
+  font-weight:bold;
+  color:#102951;
+  margin-bottom:8px;
+  text-align:center;
+}
+.selected-credential{
+  background:#eaf2ff;
+  border:1px solid #c7daf8;
+  border-radius:10px;
+  color:#1649b7;
+  font-weight:bold;
+  padding:8px 10px;
+  text-align:center;
+  margin-bottom:10px;
+}
+.credential-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:5px 0;
+  border-bottom:1px solid #e8eef7;
+}
+.credential-row:last-of-type{border-bottom:0;}
+.credential-row b{color:#102951;}
+.credential-box p{
+  margin:10px 0 0;
+  line-height:1.4;
+  text-align:center;
+}
