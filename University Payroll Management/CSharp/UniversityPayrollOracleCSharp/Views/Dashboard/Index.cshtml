@@ -1,0 +1,94 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard - University Payroll";
+}
+<main class="main-content">
+    <div class="page-header">
+        <h1>Dashboard</h1>
+        <p>Overview of faculty payroll and Oracle records</p>
+    </div>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="notice error">@error</div>
+    }
+
+    <div class="stat-grid four">
+        <div class="stat-card">
+            <div class="stat-top"><span class="stat-icon blue">FC</span><span class="pill blue-text">Total</span></div>
+            <div class="stat-value">@Model.FacultyCount</div>
+            <div class="stat-label">Faculty Members</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-top"><span class="stat-icon green">$</span><span class="pill green">This Month</span></div>
+            <div class="stat-value">$@Model.MonthlyPayrollTotal.ToString("N0")</div>
+            <div class="stat-label">Monthly Payroll</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-top"><span class="stat-icon purple">PT</span><span class="pill blue-text">All</span></div>
+            <div class="stat-value">@Model.PayrollTransactionCount</div>
+            <div class="stat-label">Payroll Transactions</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-top"><span class="stat-icon orange">DP</span><span class="pill orange-text">Active</span></div>
+            <div class="stat-value">@Model.DepartmentCount</div>
+            <div class="stat-label">Departments</div>
+        </div>
+    </div>
+
+    <div class="dashboard-lower">
+        <section class="panel">
+            <h2>Quick Actions</h2>
+            <a class="quick-action" asp-controller="Faculty" asp-action="Add"><span class="qa-icon blue">+</span><span><b>Add Faculty</b><small>Create a faculty record</small></span></a>
+            <a class="quick-action" asp-controller="Payroll" asp-action="Index"><span class="qa-icon green">$</span><span><b>Run Payroll</b><small>Add a payroll transaction</small></span></a>
+            <a class="quick-action" asp-controller="Reports" asp-action="Index"><span class="qa-icon purple">RP</span><span><b>Reports</b><small>Department-wise summary</small></span></a>
+            <a class="quick-action" asp-controller="Test" asp-action="Oracle"><span class="qa-icon orange">OR</span><span><b>Oracle Test</b><small>Check C# database connection</small></span></a>
+        </section>
+
+        <section class="panel">
+            <h2>Recent Audit Activity</h2>
+            @if (Model.RecentActivities.Count == 0)
+            {
+                <p>No audit activity found.</p>
+            }
+            @foreach (var activity in Model.RecentActivities)
+            {
+                <div class="activity-row">
+                    <div class="activity-icon">@activity.Title.FirstOrDefault()</div>
+                    <div class="activity-text">
+                        <b>@activity.Title</b>
+                        <span>@activity.Description</span>
+                    </div>
+                    <div class="activity-amount">
+                        <span>@(activity.CreatedAt == DateTime.MinValue ? "" : activity.CreatedAt.ToString("dd MMM yyyy"))</span>
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+
+    <section class="panel setup-list-panel">
+        <div class="table-top"><h2>Recent Faculty</h2></div>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Designation</th><th>Email</th></tr></thead>
+                <tbody>
+                @if (Model.RecentFaculty.Count == 0)
+                {
+                    <tr><td colspan="5">No faculty found.</td></tr>
+                }
+                @foreach (var faculty in Model.RecentFaculty)
+                {
+                    <tr>
+                        <td>@faculty.Id</td>
+                        <td><b>@faculty.FacultyName</b></td>
+                        <td>@faculty.DepartmentName</td>
+                        <td>@faculty.Designation</td>
+                        <td>@faculty.Email</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>

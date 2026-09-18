@@ -1,0 +1,89 @@
+@model SetupViewModel
+@{
+    ViewData["Title"] = "System Setup - University Payroll";
+}
+<main class="main-content">
+    <div class="title-line">
+        <div class="page-icon orange">ST</div>
+        <div>
+            <h1>System Setup</h1>
+            <p>Admin setup for Oracle DEAN and DEPARTMENT tables</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Message))
+    {
+        <div class="notice @(Model.Success ? "success" : "error")">@Model.Message</div>
+    }
+
+    <div class="setup-grid">
+        <section class="panel setup-card">
+            <h2>Oracle Login Users</h2>
+            <p>Users are Oracle database accounts from your SQL script.</p>
+            @foreach (var user in Model.Users)
+            {
+                <div class="credential-row"><b>@user.Name</b><span>@user.Username / @user.Role</span></div>
+            }
+        </section>
+
+        <section class="panel setup-card">
+            <h2>Add Department</h2>
+            <form asp-controller="Setup" asp-action="AddDepartment" method="post">
+                <div class="form-group">
+                    <label asp-for="Form.DepartmentName"></label>
+                    <input asp-for="Form.DepartmentName" id="department_name" />
+                    <span asp-validation-for="Form.DepartmentName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Form.PayrollBudget"></label>
+                    <input asp-for="Form.PayrollBudget" />
+                    <span asp-validation-for="Form.PayrollBudget" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Form.DeanName"></label>
+                    <input asp-for="Form.DeanName" id="dean_name" />
+                    <span asp-validation-for="Form.DeanName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Form.DeanEmail"></label>
+                    <input asp-for="Form.DeanEmail" id="dean_email" />
+                    <span asp-validation-for="Form.DeanEmail" class="text-danger"></span>
+                </div>
+                <button type="submit" class="primary-btn full-btn">Save Department</button>
+            </form>
+        </section>
+
+        <section class="panel setup-card">
+            <h2>Designations</h2>
+            <p>Your Oracle schema stores designation directly in the FACULTY table.</p>
+            @foreach (var designation in Model.Designations)
+            {
+                <div class="credential-row"><b>@designation.Title</b><span>Available in faculty form</span></div>
+            }
+        </section>
+    </div>
+
+    <section class="panel setup-list-panel">
+        <div class="table-top"><h2>Saved Departments</h2></div>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>Department</th><th>Budget</th><th>Dean</th><th>Dean Email</th></tr></thead>
+                <tbody>
+                    @if (Model.Departments.Count == 0)
+                    {
+                        <tr><td colspan="4">No departments found.</td></tr>
+                    }
+                    @foreach (var dept in Model.Departments)
+                    {
+                        <tr>
+                            <td><b>@dept.Name</b></td>
+                            <td>$@dept.PayrollBudget.ToString("N0")</td>
+                            <td>@dept.DeanName</td>
+                            <td>@dept.DeanEmail</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
