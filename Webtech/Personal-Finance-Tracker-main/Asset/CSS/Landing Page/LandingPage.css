@@ -1,0 +1,113 @@
+*{
+    background-color: white;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.headDiv{
+    position: fixed;
+    top:20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:20px;
+}
+.login{
+    position: fixed;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 20px 8px 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(7,97,149,255);
+    cursor: pointer;
+}
+.signup{
+    position: fixed;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid rgba(51,71,92,255);
+    padding: 8px 18px 8px 18px;
+    border-radius: 15px;
+    color: rgba(51,71,92,255);
+    font-weight: bold;
+    cursor: pointer;
+}
+.aboutus{
+    position: fixed;
+    text-decoration: none;
+    font-size: 19px;
+    margin-right: 0px;
+    /* border: 2px solid rgba(51,71,92,255); */
+    padding: 8px 18px 8px 18px;
+    border-radius: 16px;
+    color: rgba(51,71,92,255);
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px; 
+    margin-left: 10px;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    height: 61px;
+    left: 0;
+    top: 0;
+}
+
+.right{
+    position: fixed;
+    display: flex;
+    top:100px;
+    left: 90px;
+    flex-direction: column;
+    gap: 0px;
+}
+.title{
+    position: fixed;
+    color: rgba(0,65,90,255);
+    font-size: 40px;
+    /* font-weight: bold; */
+}
+.tagline{
+    position: fixed;
+    color: rgba(0,65,90,255);
+    font-size: 20px;
+    margin-top: -20px;
+}
+.tagline2{
+    position: fixed;
+    color: rgba(0,65,90,255);
+    font-size: 25px;
+    margin-top: 0px;
+}
+.started{
+    position: fixed;
+    margin-top: 16px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    padding: 10px 15px 10px  15px;
+    background-color: rgba(7,98,150,255);
+    border-radius: 15px;
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.imageGr{
+    position: fixed;
+    width: 400px;
+    height: 350px;
+    margin-left: 600px;
+    margin-top: 20px;
+}
+

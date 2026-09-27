@@ -1,0 +1,163 @@
+* {
+  font-family: sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main_box {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.content_box {
+  height: 85vh;
+  width: 450px;
+  background-color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 20px rgba(29, 53, 87, 0.2);
+  border-radius: 16px;
+
+
+}
+
+.input_feild {
+  margin-top: 1.5rem;
+  width: 70%;
+  border-bottom: 2px solid #333;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.input_feild input {
+
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+
+}
+
+.place_style::placeholder {
+  color: #888;
+  font-size: 16px;
+  font-style: italic;
+  opacity: 1;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+
+}
+
+.gender h4 {
+  margin-right: 15px;
+}
+
+
+.login {
+  display: flex;
+  margin-top: 50px;
+
+}
+
+.login a {
+  text-decoration: none;
+
+  margin-left: 8px;
+  font-size: large;
+}
+
+.login a:hover {
+  color: red;
+
+  font-weight: 700;
+}
+
+.Submit {
+  margin-top: 20px;
+
+}
+
+.date_style {
+  font-family: 'Roboto', sans-serif;
+  /* Change font */
+  font-size: 20px;
+  color: #333;
+}
+
+.button {
+  height: 50px;
+  width: 250px;
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  /* Smooth animation */
+}
+
+
+
+.button:hover {
+  background-color: #d62828;
+  /* Slightly darker */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* Lift effect */
+  border-radius: 23px;
+  /* More rounded on hover */
+  color: #ffffff;
+
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .content_box {
+    padding: 1.5rem;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .gender {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 700px;
+  left: 670px;
+  display: flex;
+  font-size: 20px;
+
+}
+
+footer i {
+  margin-left: 20px;
+  color: rgb(100, 7, 231);
+  font-size: 25px;
+}

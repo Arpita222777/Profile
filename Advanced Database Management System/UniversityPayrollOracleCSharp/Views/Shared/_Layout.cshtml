@@ -1,0 +1,30 @@
+@{
+    var isAuthPage = (ViewData["AuthPage"] as bool?) == true;
+    var title = ViewData["Title"] as string ?? "University Payroll Management System";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@title</title>
+    <link rel="stylesheet" href="~/css/common.css" />
+    @if (isAuthPage)
+    {
+        <link rel="stylesheet" href="~/css/login-style.css" />
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/css/payroll-style.css" />
+    }
+</head>
+<body>
+    @if (!isAuthPage)
+    {
+        <partial name="_Sidebar" />
+    }
+    @RenderBody()
+    <script src="~/js/payroll.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

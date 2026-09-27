@@ -1,0 +1,33 @@
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "Dashboard";
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? "Index";
+    var role = Context.Session.GetString("UserRole") ?? string.Empty;
+    string activeController(string name) => string.Equals(controller, name, StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty;
+    string activeAction(string name, string act) => string.Equals(controller, name, StringComparison.OrdinalIgnoreCase) && string.Equals(action, act, StringComparison.OrdinalIgnoreCase) ? "active" : string.Empty;
+}
+<aside class="sidebar">
+    <div class="brand">
+        <div class="brand-title">Payroll System</div>
+        <div class="brand-subtitle">University Management</div>
+    </div>
+
+    <nav class="side-menu">
+        <a class="@(activeController("Dashboard"))" asp-controller="Dashboard" asp-action="Index"><span class="nav-icon">DB</span>Dashboard</a>
+        @if (role == "Admin")
+        {
+            <a class="@(activeController("Setup"))" asp-controller="Setup" asp-action="Index"><span class="nav-icon">ST</span>Setup</a>
+        }
+        <a class="@(activeAction("Faculty", "Index"))" asp-controller="Faculty" asp-action="Index"><span class="nav-icon">US</span>Faculty</a>
+        @if (role == "Admin" || role == "Payroll Staff")
+        {
+            <a class="@(activeAction("Faculty", "Add"))" asp-controller="Faculty" asp-action="Add"><span class="nav-icon">+</span>Add Faculty</a>
+            <a class="@(activeController("Payroll"))" asp-controller="Payroll" asp-action="Index"><span class="nav-icon">$</span>Payroll</a>
+        }
+        <a class="@(activeController("Reports"))" asp-controller="Reports" asp-action="Index"><span class="nav-icon">RP</span>Reports</a>
+        <a class="@(activeController("Test"))" asp-controller="Test" asp-action="Oracle"><span class="nav-icon">OR</span>Oracle Test</a>
+    </nav>
+
+    <div class="logout-box">
+        <a asp-controller="Account" asp-action="Logout" onclick="return confirmLogout()"><span class="nav-icon">LO</span>Logout</a>
+    </div>
+</aside>

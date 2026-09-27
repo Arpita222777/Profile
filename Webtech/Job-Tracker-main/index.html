@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Application Tracker</title>
+  
+  <!-- Tailwind + DaisyUI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+       background-color: #0f172a; 
+       color: #f8fafc;
+      font-family: 'Inter', sans-serif;
+       }
+    .container-max { 
+      max-width: 1100px;
+     }
+    .job-card { 
+      background:
+       #1e293b; 
+       border: 1px solid #334155;
+        transition: all 0.3s ease;
+       }
+    .job-card:hover {
+       border-color: #3b82f6; 
+      }
+    .stat-box {
+       background: #1e293b;
+        border: 1px solid #334155;
+       }
+    .tab-active {
+       background-color: 
+       #3b82f6 !important; color:
+        white !important; 
+      }
+      
+    .empty-box {
+       border: 1px solid rgba(37, 52, 77, 0.7); 
+       border-radius: 14px;
+        background: rgba(15, 27, 45, 0.55); 
+      }
+
+        @media (max-width: 640px) {
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .stat-box {
+      padding: 1.2rem;
+    }
+
+    .tabs {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .tab {
+      flex: none;
+    }
+
+    #jobsContainer {
+      padding-bottom: 40px;
+    }
+
+    .empty-box {
+      padding: 2rem 1rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .flex.items-center.justify-between {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+  }
+</style>
+  </style>
+</head>
+<body class="min-h-screen pb-20">
+
+<div class="max-w-6xl mx-auto px-6 lg:px-8 pt-10">
+
+  <h1 class="text-3xl font-bold text-blue-500 mb-8">Job Application Tracker</h1>
+
+  <!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-12">
+      <div class="stat-box p-6 rounded-2xl">
+      <div class="text-xs uppercase tracking-widest text-slate-400 font-bold">TOTAL</div>
+      <div id="statTotal" class="text-4xl font-black mt-2 text-white">0</div>
+    </div>
+    <div class="stat-box p-6 rounded-2xl">
+      <div class="text-xs uppercase tracking-widest text-slate-400 font-bold">INTERVIEW</div>
+      <div id="statInterview" class="text-4xl font-black mt-2 text-emerald-400">0</div>
+    </div>
+    <div class="stat-box p-6 rounded-2xl">
+      <div class="text-xs uppercase tracking-widest text-slate-400 font-bold">REJECTED</div>
+      <div id="statRejected" class="text-4xl font-black mt-2 text-red-500">0</div>
+    </div>
+  </div>
+
+  <!-- Job section -->
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold">Available Jobs</h2>
+    <div id="countText" class="text-sm font-semibold text-slate-400">0 jobs</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="mb-6">
+    <div role="tablist" class="tabs tabs-boxed bg-slate-800 p-1 inline-flex">
+      <button role="tab" class="tab tab-active px-6" data-tab="all">All</button>
+      <button role="tab" class="tab px-6" data-tab="not_applied">Not Applied</button>
+      <button role="tab" class="tab px-6" data-tab="interview">Interview</button>
+      <button role="tab" class="tab px-6" data-tab="rejected">Rejected</button>
+    </div>
+  </div>
+
+  <!-- Jobs container -->
+  <div id="jobsContainer" class="space-y-4"></div>
+
+  <!-- Empty state -->
+  <div id="emptyState" class="hidden p-10 sm:p-14">
+    <div class="empty-box p-10 sm:p-14 flex flex-col items-center justify-center text-center">
+      <img src="./jobs.png" alt="">
+      <div class="mt-6 text-xl font-extrabold">No jobs available</div>
+      <div class="mt-2 text-sm muted font-semibold">Check back soon for new job opportunities</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Link to external JS -->
+<script src="./javascript.js"></script>
+
+</body>
+</html>

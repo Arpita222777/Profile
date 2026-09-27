@@ -1,0 +1,211 @@
+* {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: white;
+}
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.Header {
+    position: fixed;
+    top: 0;
+    left: 00px;
+    height: 70px;
+    display: flex;
+    z-index: 1000;
+    background-color: rgba(19, 19, 19, 255);
+    width: 100%;
+  }
+  .logo{
+    margin: 10px auto auto 15px;
+    display: block;
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+}
+  .user-info {
+    list-style: none;
+    position: fixed;
+    color: aliceblue;
+    text-align: left;
+    left: 930px;
+    gap: 0px;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    margin-top: 20px;
+    appearance: none;
+    background-color: transparent;
+  }
+  .username {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .designation {
+    margin: 0;
+    font-size: 12px;
+    background-color: transparent;
+  }
+  
+  .Uimg {
+    position: fixed;
+    top:20px;
+    left: 1020px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+  
+  .Unotify {
+    position: fixed;
+    top:25px;
+    left: 880px;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: transparent;
+  }
+  
+  .search-bar {
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  .search-bar input {
+    color: white;
+    background-color: transparent;
+    width: 450px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  
+  .search-bar input::placeholder {
+    color: white;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+  }
+  
+  .search-bar .fa-search {
+    color: white;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+
+  /*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.bodyClass{
+    background-color: #fefefe;;
+    /* border: 2px solid red; */
+    width: 96%;
+    height: 400px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.ldash{
+    width: 40%;
+    margin: 10px 10px 10px 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #e5e7ea;
+}
+.ldash_title{
+    margin: 5px;
+    font-size: 22px;
+    background-color: transparent;
+}
+.creditCard,.sLoan,.morgatge {
+    /* border: 2px solid red; */
+    margin: 10px;
+    width: 95%;
+    height: auto;
+    border-radius: 20px;
+    background-color: #fefefe;
+}
+.topRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 10px 5px 10px;
+    background-color: transparent;
+}
+.label{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+}
+.date{
+    font-size: 18px;
+    font-weight: bold;
+    color: #b4bbc3;
+    background-color: transparent;
+}
+.money{
+    margin-left: 20px;
+    font-size: 25px;
+    background-color: transparent;
+}
+.pcalc{
+    margin: 10px;
+    width: 25%;
+    background-color: #e5e7ea;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    height: 300px;
+}
+.pcalc h1{
+    font-size: 20px;
+    margin: 10px;
+}
+.dropdown, .intRate,.paydate{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    
+}
+.intRate{
+    outline: none;
+}
+.calc{
+    width: 100px;
+    margin-top: 80px;
+    margin-left: 130px;
+    border-radius: 20px;
+}
+.int{
+    margin: 10px;
+    width: 35%;
+    background-color: #e5e7ea;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    height: auto;
+
+}
+.int h1{
+    font-size: 20px;
+    margin: 10px;
+}

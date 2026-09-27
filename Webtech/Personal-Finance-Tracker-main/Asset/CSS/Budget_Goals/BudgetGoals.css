@@ -1,0 +1,189 @@
+* {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(171, 208, 241);
+}
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.Header {
+    position: fixed;
+    top: 0;
+    left: 00px;
+    height: 70px;
+    display: flex;
+    z-index: 1000;
+    background-color: rgba(19, 19, 19, 255);
+    width: 100%;
+  }
+  .logo{
+    margin: 10px auto auto 15px;
+    display: block;
+    width: 120px;
+    height: 50px;
+    background-color: transparent;
+}
+  .user-info {
+    list-style: none;
+    position: fixed;
+    color: aliceblue;
+    text-align: left;
+    left: 930px;
+    gap: 0px;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    margin-top: 20px;
+    appearance: none;
+    background-color: transparent;
+    
+  }
+  .username {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  
+  .designation {
+    margin: 0;
+    font-size: 12px;
+    background-color: transparent;
+  }
+  
+  .Uimg {
+    position: relative;
+    top:20px;
+    margin-left: auto;
+    margin-right: 30px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  .Unotify {
+    position: fixed;
+    top:25px;
+    left: 880px;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 15px;
+    background-color: transparent;
+  }
+  
+  .search-bar {
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  .search-bar input {
+    color: white;
+    background-color: transparent;
+    width: 450px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+  }
+  
+  .search-bar input::placeholder {
+    color: white;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+  }
+  
+  .search-bar .fa-search {
+    color: white;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+  /*///////////////////////////// Header Panel//////////////////////////////////////////*/
+
+    /*///////////////////////////// Body Class //////////////////////////////////////////*/
+.bodyclass {
+    margin-top: 80px;
+    width: 80%;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto; /* Optional: center horizontally */
+    background-color:  #f5f5f5;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.bSet{
+  width: 80%;
+  height: auto;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  align-items: center;
+}
+.bSetinput{
+  background-color: transparent;
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 250px;
+  height: 30px;
+}
+.bSeth1{
+  background-color: transparent;
+  font-size: 18px;
+  color: black;
+  margin-left: 20px;
+}
+.bSetButton{
+  background-color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.allBudget{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  border: 2px solid rgb(102, 122, 235);
+  background-color: transparent;
+  border-radius: 5px;
+}
+#showPanel{
+  margin: 10px;
+  padding: 5px;
+  background-color: transparent;
+}
+.newPaAd{
+  margin: 10px;
+  margin-left: 120px;
+  width: 50%;
+  display: none;
+  border-radius: 5px;
+}
+.tableB{
+  padding: 10px;
+  border-radius: 5px;
+
+}
+.warning{
+  width: 80%;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: auto;
+  border: 2px solid red;
+  background-color: transparent;
+}

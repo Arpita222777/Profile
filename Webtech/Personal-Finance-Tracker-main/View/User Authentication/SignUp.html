@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="../../Asset/CSS/User Authentication/SignUp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../Asset/JS/User Authentication/SignUp.js" defer></script>
+</head>
+
+<body>
+    <section class="main_box">
+        <div class="content_box">
+            <div class="header">
+                <h2>SignUp Here</h2>
+            </div>
+            
+            <form action="../../Controller/SignUpCheck.php" method="post" >
+                <div class="input_feild">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" class="place_style" required>
+                </div>
+                <div class="input_feild">
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" class="place_style" required>
+                </div>
+                <div class="input_feild">
+                    <input type="number" name="phone" id="phone" placeholder="Phone" class="place_style" required>
+                </div>
+                <div class="input_feild">
+                    <input type="email" name="email" id="email" placeholder="Email" class="place_style" required>
+                </div>
+                <div class="gender">
+                    <h4>Gender</h4>
+                    <div><label for="gmale">Male</label>
+                        <input type="radio" name="gender" value="Male" id="gmale">
+                        <label for="gfmale">Female</label>
+                        <input type="radio" name="gender" value="Female" id="gfmale">
+                        <label for="gothers">Others</label>
+                        <input type="radio" name="gender" value="Others" id="gothers">
+                    </div>
+
+                </div>
+                <div class="input_feild">
+                    <input type="date" name="birthdate" id="birthdate" class="date_style" required>
+                </div>
+                <div class="input_feild">
+                    <input type="text" name="username" id="username" class="date_style" placeholder="Set Username" required>
+                </div>
+                <div class="input_feild">
+                    <input type="password" name="password" id="password" class="place_style" placeholder="Set Password"
+                        required>
+                </div>
+                <div class="Submit">
+                    <button type="submit" class="button" id="signup_btn" name="submit">SignUp</button>
+                </div>
+            </form>
+
+            <div class="login">
+                <p>Already a User?</p>
+                <a href="LogIn.html">LogIn</a>
+            </div>
+        </div>
+
+
+    </section>
+    <footer>
+        <h4>SignUp With </h4>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-google"></i></a>
+    </footer>
+
+
+</body>
+
+</html>
